@@ -100,12 +100,6 @@ func main() {
 
 	r := gin.Default()
 
-	r.GET("/reserve/zoom/mtgs", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "All reserved Zoom MTG's!",
-		})
-	})
-
 	r.POST("/reserve/zoom/mtg", func(c *gin.Context) {
 		jwt, err := getJWT()
 		if err != nil {
